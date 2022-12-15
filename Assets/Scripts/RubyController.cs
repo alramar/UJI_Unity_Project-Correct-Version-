@@ -22,6 +22,8 @@ public class RubyController : MonoBehaviour
 
     public GameObject projectilePrefab;
 
+    AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,9 +33,15 @@ public class RubyController : MonoBehaviour
 
         animator = GetComponent<Animator>();
 
+        audioSource = GetComponent<AudioSource>();
+
     }
 
-    // Update is called once per frame
+    public void PlaySound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
+    }
+    
     void Update()
     {
         float horizontal = Input.GetAxis("Horizontal");
@@ -83,7 +91,7 @@ public class RubyController : MonoBehaviour
         }
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        Debug.Log(currentHealth + "/" + maxHealth);
+        UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
     }
 
     void Launch()

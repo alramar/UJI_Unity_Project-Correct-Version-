@@ -149,7 +149,7 @@ MonoBehaviour:
   speed: 6
   vertical: 1
   changeTime: 3
-  smokeEffect: {fileID: 8015244313793223884, guid: c81b951e2ca9bab4da44a76d49f1ad3f, type: 3}
+  smokeEffect: {fileID: 4726154693841659393}
 --- !u!95 &4750776842380320636
 Animator:
   serializedVersion: 3
@@ -281,5 +281,10 @@ PrefabInstance:
 --- !u!4 &4726154693841659392 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8015244313793223885, guid: c81b951e2ca9bab4da44a76d49f1ad3f, type: 3}
+  m_PrefabInstance: {fileID: 3363470509989133005}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4726154693841659393 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8015244313793223884, guid: c81b951e2ca9bab4da44a76d49f1ad3f, type: 3}
   m_PrefabInstance: {fileID: 3363470509989133005}
   m_PrefabAsset: {fileID: 0}
